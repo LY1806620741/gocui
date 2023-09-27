@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/jroimartin/gocui"
+	"github.com/LY1806620741/gocui"
 )
 
 func main() {

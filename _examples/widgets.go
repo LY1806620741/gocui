@@ -10,7 +10,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/jroimartin/gocui"
+	"github.com/LY1806620741/gocui"
 )
 
 const delta = 0.2

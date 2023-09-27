@@ -45,16 +45,18 @@ func layout(g *gocui.Gui) error {
 		fmt.Fprintln(v, "Button 1 - line 3")
 		fmt.Fprintln(v, "按钮 1 - 行 4")
 	}
-	if v, err := g.SetView("but2", 24, 2, 44, 4); err != nil {
-		if err != gocui.ErrUnknownView {
-			return err
-		}
-		v.Highlight = true
-		v.SelBgColor = gocui.ColorGreen
-		v.SelFgColor = gocui.ColorBlack
-		fmt.Fprintln(v, "Button 2 - line 1")
-	}
 	return nil
+
+	// if v, err := g.SetView("but2", 24, 2, 44, 4); err != nil {
+	// 	if err != gocui.ErrUnknownView {
+	// 		return err
+	// 	}
+	// 	v.Highlight = true
+	// 	v.SelBgColor = gocui.ColorGreen
+	// 	v.SelFgColor = gocui.ColorBlack
+	// 	fmt.Fprintln(v, "Button 2 - line 1")
+	// }
+	// return nil
 }
 
 func keybindings(g *gocui.Gui) error {
