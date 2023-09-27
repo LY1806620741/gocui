@@ -6,7 +6,9 @@ package gocui
 
 import (
 	"errors"
+	"runtime"
 
+	"github.com/mattn/go-runewidth"
 	"github.com/nsf/termbox-go"
 )
 
@@ -75,6 +77,11 @@ func NewGui(mode OutputMode) (*Gui, error) {
 	}
 
 	g := &Gui{}
+
+	// 因为windows下gbk制表符的占位部不对称，因此换一个对称的制表符
+	if runtime.GOOS == "windows" && runewidth.IsEastAsian() {
+		g.ASCII = true
+	}
 
 	g.outputMode = mode
 	termbox.SetOutputMode(termbox.OutputMode(mode))

@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/jroimartin/gocui"
+	"github.com/LY1806620741/gocui"
 )
 
 func main() {
@@ -43,7 +43,7 @@ func layout(g *gocui.Gui) error {
 		fmt.Fprintln(v, "Button 1 - line 1")
 		fmt.Fprintln(v, "Button 1 - line 2")
 		fmt.Fprintln(v, "Button 1 - line 3")
-		fmt.Fprintln(v, "Button 1 - line 4")
+		fmt.Fprintln(v, "按钮 1 - 行 4")
 	}
 	if v, err := g.SetView("but2", 24, 2, 44, 4); err != nil {
 		if err != gocui.ErrUnknownView {
